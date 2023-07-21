@@ -3,6 +3,9 @@
 <head> <title>NEWS</title>
 </head>
 <body>
+<h1 style="color: #5e9ca0; text-align: left;">Single plane balancing application</h1>
+<h2 style="color: #2e6c80;">How to use the applicating:</h2>
+
 <form action = "/" method="get">
 <input type="text" name="mode"/><br><br>
 </form>

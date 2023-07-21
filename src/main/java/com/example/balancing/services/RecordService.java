@@ -15,7 +15,7 @@ public class RecordService {
     private final RecordRepository recordRepository;
 
     public List<Record> getRecords(String mode) {
-        //if (mode != null) recordRepository.findByMode(mode);
+        if (mode != null) recordRepository.findByMode(mode);
         return recordRepository.findAll();
     }
 
