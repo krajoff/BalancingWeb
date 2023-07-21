@@ -27,13 +27,13 @@ public class RecordController {
         return "record-info";
     }
 
-    @PostMapping("/records/create")
+    @PostMapping("/record/create")
     public String createRecord(Record record) {
         recordService.saveRecord(record);
         return "redirect:/";
     }
 
-    @PostMapping("/records/delete/{id}")
+    @PostMapping("/record/delete/{id}")
     public String deleteRecord(@PathVariable Integer id) {
         recordService.deleteRecord(id);
         return "redirect:/";

@@ -17,13 +17,16 @@ USE balancing;
 
 DROP TABLE IF EXISTS records;
 CREATE TABLE records (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     mode VARCHAR(50),
     mvibration DOUBLE,
     pvibration DOUBLE,
 	mweight DOUBLE,
     pweight DOUBLE, 
 	reference BIGINT,
-	stage BOOLEAN) COMMENT 'Вибрационное состояние';
-
+	stage INT8) COMMENT 'Вибрационное состояние';
+REPLACE INTO `records` ( `mode`, `mvibration`, `pvibration`, `mweight`, `pweight`, `reference`, `stage`) 
+VALUES ('100%n', '100', '200', '200','200', '1','0');
+REPLACE INTO `records` ( `mode`, `mvibration`, `pvibration`, `mweight`, `pweight`, `reference`, `stage`) 
+VALUES ('100%n', '200', '300', '300','300', '1','0');
 ```

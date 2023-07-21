@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 public class Record {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
    // static int count;
     @Column(name = "mode")
     private String mode;
@@ -39,7 +39,7 @@ public class Record {
 //    private double phaseTargetWeight;
 //    private Complex complexTargetWeight;
     @Column(name = "stage")
-    public boolean stage;
+    public int stage;
 
 
 //    public Record(String mode,

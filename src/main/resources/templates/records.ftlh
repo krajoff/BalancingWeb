@@ -7,16 +7,45 @@
 <input type="text" name="mode"/><br><br>
 </form>
 <#list records as record>
-    <div>
-        <p><b>${record.mode}</b> <a href="/record/${record.id}">...</a></p>
+<table>
+    <tr>
+        <th wigth="80">id</th>
+        <th wigth="80">Mode</th>
+        <th wigth="80">mVibration</th>
+        <th wigth="80">pVibration</th>
+        <th wigth="80">mWeight</th>
+        <th wigth="80">pWeight</th>
+        <th wigth="80">Reference</th>
+        <th wigth="80">Stage</th>
+    </tr>
 
-    </div>
-    <#else>
-       <h3> нет записи </h3>
+    <tr>
+        <td>${record.id}</td>
+        <td>${record.mode}</td>
+        <td>${record.mvibration}</td>
+        <td>${record.pvibration}</td>
+        <td>${record.mweight}</td>
+        <td>${record.pweight}</td>
+        <td>${record.reference}</td>
+        <td>${record.stage}</td>
+    </tr>
+<#else>
+<h3> нет записи </h3>
+
+</table>
 </#list>
-add record
-<form action = "records/create" method="post">
-Режим <input type="text" name="mode"/><br><br>
+<hr>
+
+
+<form action="/record/create" method="post">
+    Mode: <input type="text" name="mode"/><br><br>
+    vibration magnitude: <input type="number" name="mvibration"/><br><br>
+    vibration phase: <input type="number" name="pvibration"/><br><br>
+    weight magnitude: <input type="number" name="mweight"/><br><br>
+    weight phase: <input type="number" name="pweight"/><br><br>
+    reference: <input type="number" name="reference"/><br><br>
+    stage: <input type="number" name="stage"/><br><br>
+    <input type="submit" value="Add record"/>
 </form>
 
 </body>
