@@ -1,7 +1,7 @@
-package com.example.demo.services;
+package com.example.balancing.services;
 
-import com.example.demo.models.Record;
-import com.example.demo.repository.RecordRepository;
+import com.example.balancing.models.Record;
+import com.example.balancing.repository.RecordRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -12,15 +12,15 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 public class RecordService {
-    private RecordRepository recordRepository;
+    private final RecordRepository recordRepository;
 
     public List<Record> getRecords(String mode) {
-        if (mode != null) recordRepository.findByMode(mode);
+        //if (mode != null) recordRepository.findByMode(mode);
         return recordRepository.findAll();
     }
 
     public void saveRecord(Record record) {
-        log.info("Adding new {}", record);
+        log.info("Saving new {}", record);
         recordRepository.save(record);
     }
 

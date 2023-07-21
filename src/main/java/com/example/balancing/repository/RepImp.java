@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.example.balancing.repository;
 
-import com.example.demo.models.Record;
+import com.example.balancing.models.Record;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

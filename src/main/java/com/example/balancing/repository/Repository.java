@@ -1,8 +1,7 @@
-package com.example.demo.repository;
+package com.example.balancing.repository;
 
-import com.example.demo.models.Record;
+import com.example.balancing.models.Record;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface Repository {

@@ -1,7 +1,7 @@
-package com.example.demo.repository;
+package com.example.balancing.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.demo.models.Record;
+import com.example.balancing.models.Record;
 
 import java.util.List;
 

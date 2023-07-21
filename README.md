@@ -18,11 +18,12 @@ USE balancing;
 DROP TABLE IF EXISTS records;
 CREATE TABLE records (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    rate VARCHAR(50),
-    mVibration BIGINT,
-    pVibration BIGINT,
-	mWeight BIGINT,
-    pWeight BIGINT, 
+    mode VARCHAR(50),
+    mvibration DOUBLE,
+    pvibration DOUBLE,
+	mweight DOUBLE,
+    pweight DOUBLE, 
 	reference BIGINT,
 	stage BOOLEAN) COMMENT 'Вибрационное состояние';
+
 ```
