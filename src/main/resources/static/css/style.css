@@ -8,7 +8,7 @@ h2 {
 }
 ul {
   color: #2e6c80;
-  padding: 5px;
+  padding:10px;
 }
 
 ul li {
@@ -20,7 +20,7 @@ div.blueTable {
   font-family: Tahoma, Geneva, sans-serif;
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
-  width: 350px;
+  width: 550px;
   text-align: center;
   border-collapse: collapse;
 }
