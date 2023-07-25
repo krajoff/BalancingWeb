@@ -79,3 +79,13 @@ div.blueTable {
 .divTableHeading { display: table-header-group;}
 .divTableFoot { display: table-footer-group;}
 .divTableBody { display: table-row-group;}
+
+input[type=text], input[type=number] {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+

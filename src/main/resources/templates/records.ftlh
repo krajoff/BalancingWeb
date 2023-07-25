@@ -18,66 +18,63 @@
   <li>The state is an on/off switch. It is used to take into
   account in the averaging of values when calculating the total load.</li>
 </ul>
-
-<div class="divTable blueTable">
-    <div class="divTableHeading">
-        <div class="divTableRow">
-            <div class="divTableHead">id</div>
-            <div class="divTableHead">Mode</div>
-            <div class="divTableHead">Vibration <br> magnitude</div>
-            <div class="divTableHead">Vibration <br> phase</div>
-            <div class="divTableHead">Weight <br> magnitude</div>
-            <div class="divTableHead">Weight <br> phase</div>
-            <div class="divTableHead">Reference</div>
-            <div class="divTableHead">State</div>
-        </div>
-    </div>
-    <div class="divTableBody">
-    <#list records as record>
-        <div class="divTableRow">
-            <div class="divTableCell">${record.id}</div>
-            <div class="divTableCell">${record.mode}</div>
-            <div class="divTableCell">${record.mvibration}</div>
-            <div class="divTableCell">${record.pvibration}</div>
-            <div class="divTableCell">${record.mweight}</div>
-            <div class="divTableCell">${record.pweight}</div>
-            <div class="divTableCell">${record.reference}</div>
-            <div class="divTableCell">${record.stage}</div>
-        </div>
-    <#else>
-    <h3> нет записи </h3>
-    </#list>
-    <form action="/record/create" method="post">
-        <div class="divTableRow">
-            <div class="divTableCell"></div>
-            <div class="divTableCell"><input type="text" name="mode"/></div>
-            <div class="divTableCell"><input type="number" name="mvibration"/></div>
-            <div class="divTableCell"><input type="number" name="pvibration"/></div>
-            <div class="divTableCell"><input type="number" name="mweight"/></div>
-            <div class="divTableCell"><input type="number" name="pweight"/></div>
-            <div class="divTableCell"><input type="number" name="reference"/></div>
-            <div class="divTableCell"><input type="number" name="stage"/></div>
-        </div>
-
-    </div>
-
-</div>
-<input type="submit" value="Add record"/>
-</form>
-<hr>
-
 <form action="/record/create" method="post">
-    Mode: <input type="text" name="mode"/><br><br>
-    vibration magnitude: <input type="number" name="mvibration"/><br><br>
-    vibration phase: <input type="number" name="pvibration"/><br><br>
-    weight magnitude: <input type="number" name="mweight"/><br><br>
-    weight phase: <input type="number" name="pweight"/><br><br>
-    reference: <input type="number" name="reference"/><br><br>
-    stage: <input type="number" name="stage"/><br><br>
-    <input type="submit" value="Add record"/>
+<div class="divTable blueTable">
+  <div class="divTableHeading">
+    <div class="divTableRow">
+      <div class="divTableHead">id</div>
+      <div class="divTableHead">Mode</div>
+      <div class="divTableHead">Vibration <br> magnitude</div>
+      <div class="divTableHead">Vibration <br> phase</div>
+      <div class="divTableHead">Weight <br> magnitude</div>
+      <div class="divTableHead">Weight <br> phase</div>
+      <div class="divTableHead">Reference</div>
+      <div class="divTableHead">State</div>
+    </div>
+  </div>
+  <div class="divTableBody">
+    <#list records as record>
+    <div class="divTableRow">
+      <div class="divTableCell">${record.id}</div>
+      <div class="divTableCell">${record.mode}</div>
+      <div class="divTableCell">${record.mvibration}</div>
+      <div class="divTableCell">${record.pvibration}</div>
+      <div class="divTableCell">${record.mweight}</div>
+      <div class="divTableCell">${record.pweight}</div>
+      <div class="divTableCell">${record.reference}</div>
+      <div class="divTableCell">${record.stage}</div>
+    </div>
+    <#else>
+      <h2> Nope records </h2>
+    </#list>
+    <div class="divTableRow">
+      <div class="divTableCell"><input type="submit" value="Add record"/></div>
+      <div class="divTableCell"><input type="text" name="mode"/></div>
+      <div class="divTableCell"><input type="number" name="mvibration"/></div>
+      <div class="divTableCell"><input type="number" name="pvibration"/></div>
+      <div class="divTableCell"><input type="number" name="mweight"/></div>
+      <div class="divTableCell"><input type="number" name="pweight"/></div>
+      <div class="divTableCell"><input type="number" name="reference"/></div>
+      <div class="divTableCell"><input type="number" name="stage"/></div>
+    </div>
+
+  </div>
+</div>
 </form>
 
 
+<!-- <form action="/record/create" method="post"> -->
+<!--    Mode: <input type="text" name="mode"/><br><br> -->
+<!--    vibration magnitude: <input type="number" name="mvibration"/><br><br> -->
+<!--    vibration phase: <input type="number" name="pvibration"/><br><br> -->
+<!--    weight magnitude: <input type="number" name="mweight"/><br><br> -->
+<!--    weight phase: <input type="number" name="pweight"/><br><br> -->
+<!--    reference: <input type="number" name="reference"/><br><br> -->
+<!--    stage: <input type="number" name="stage"/><br><br> -->
+<!--    <input type="submit" value="Add record"/> -->
+<!-- </form> -->
+
+<br>
   <form action = "/" method="get">
     <input type="text" name="mode"/><br><br>
   </form>
