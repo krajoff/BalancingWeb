@@ -1,19 +1,23 @@
 h1 {
-  color: #5e9ca0;
+  color: #2e6c80;
   text-align: left;
+  padding:0px 20px;
+
 }
 h2 {
   color: #2e6c80;
   text-align: left;
+  padding:0px 20px;
+
 }
 ul {
   color: #2e6c80;
-  padding:10px;
+  padding:0px 20px;
 }
 
 ul li {
   color: #2e6c80;
-  margin: 10px;
+  margin: 10px 20px;
 }
 
 div.blueTable {
@@ -23,6 +27,7 @@ div.blueTable {
   width: 550px;
   text-align: center;
   border-collapse: collapse;
+   margin: 20px 20px
 }
 .divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
   border: 1px solid #AAAAAA;
@@ -56,7 +61,7 @@ div.blueTable {
   font-size: 18px;
 }
 .blueTable .tableFootStyle .links {
-	 text-align: right;
+  text-align: right;
 }
 .blueTable .tableFootStyle .links a{
   display: inline-block;
@@ -87,5 +92,3 @@ input[type=text], input[type=number] {
   background-color: transparent;
   cursor: pointer;
 }
-
-

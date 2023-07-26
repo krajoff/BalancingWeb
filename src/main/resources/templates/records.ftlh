@@ -5,8 +5,7 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-<h1>Single plane balancing application</h1>
-<h2>How to use the application:</h2>
+<h1>How to use single plane balancing application</h1>
 <ul>Fill in the fields in the table:
   <li>Mode is type of generator/motor load.</li>
   <li>Magnitude and phase of vibration is a value and a phase of
@@ -18,7 +17,7 @@
   <li>The state is an on/off switch. It is used to take into
   account in the averaging of values when calculating the total load.</li>
 </ul>
-<form action="/record/create" method="post">
+
 <div class="divTable blueTable">
   <div class="divTableHeading">
     <div class="divTableRow">
@@ -30,6 +29,8 @@
       <div class="divTableHead">Weight <br> phase</div>
       <div class="divTableHead">Reference</div>
       <div class="divTableHead">State</div>
+      <div class="divTableHead">Edit</div>
+      <div class="divTableHead">Delete</div>
     </div>
   </div>
   <div class="divTableBody">
@@ -43,11 +44,21 @@
       <div class="divTableCell">${record.pweight}</div>
       <div class="divTableCell">${record.reference}</div>
       <div class="divTableCell">${record.stage}</div>
+      <div class="divTableCell">
+        <form action = "/record/edit/${record.id}" method="post">
+          <input type="submit" value="edit"/>
+        </form>
+      </div>
+      <div class="divTableCell">
+        <form action = "/record/delete/${record.id}" method="post">
+          <input type="submit" value="delete"/>
+        </form>
+      </div>
     </div>
     <#else>
       <h2> Nope records </h2>
     </#list>
-    <div class="divTableRow">
+    <form class="divTableRow" style="background: #F13B3B" action="/record/create" method="post">
       <div class="divTableCell"><input type="submit" value="Add record"/></div>
       <div class="divTableCell"><input type="text" name="mode"/></div>
       <div class="divTableCell"><input type="number" name="mvibration"/></div>
@@ -56,23 +67,11 @@
       <div class="divTableCell"><input type="number" name="pweight"/></div>
       <div class="divTableCell"><input type="number" name="reference"/></div>
       <div class="divTableCell"><input type="number" name="stage"/></div>
-    </div>
-
+      <div class="divTableCell"></div>
+      <div class="divTableCell"></div>
+    </form>
   </div>
 </div>
-</form>
-
-
-<!-- <form action="/record/create" method="post"> -->
-<!--    Mode: <input type="text" name="mode"/><br><br> -->
-<!--    vibration magnitude: <input type="number" name="mvibration"/><br><br> -->
-<!--    vibration phase: <input type="number" name="pvibration"/><br><br> -->
-<!--    weight magnitude: <input type="number" name="mweight"/><br><br> -->
-<!--    weight phase: <input type="number" name="pweight"/><br><br> -->
-<!--    reference: <input type="number" name="reference"/><br><br> -->
-<!--    stage: <input type="number" name="stage"/><br><br> -->
-<!--    <input type="submit" value="Add record"/> -->
-<!-- </form> -->
 
 <br>
   <form action = "/" method="get">

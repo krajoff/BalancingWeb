@@ -39,4 +39,11 @@ public class RecordController {
         return "redirect:/";
     }
 
+    @PostMapping("/record/edit/{id}")
+    public String editRecord(@PathVariable Integer id, Model model) {
+        model.addAttribute("record", recordService.getRecordById(id));
+        model.addAttribute("records", recordService.getRecords(null));
+        return "redirect:/";
+    }
+
 }

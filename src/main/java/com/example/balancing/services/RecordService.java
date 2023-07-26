@@ -15,16 +15,17 @@ public class RecordService {
     private final RecordRepository recordRepository;
 
     public List<Record> getRecords(String mode) {
-        if (mode != null) recordRepository.findByMode(mode);
+        if (mode != null) return recordRepository.findByMode(mode);
         return recordRepository.findAll();
     }
 
     public void saveRecord(Record record) {
-        log.info("Saving new {}", record);
+        log.info("Saving a new record {}", record);
         recordRepository.save(record);
     }
 
     public void deleteRecord(Integer id) {
+        log.info("Removed the record {}", id);
         recordRepository.deleteById(id);
     }
 
