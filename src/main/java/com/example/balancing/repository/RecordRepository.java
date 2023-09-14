@@ -8,4 +8,6 @@ import java.util.List;
 public interface RecordRepository extends JpaRepository<Record, Integer> {
     List<Record> findByMode(String mode);
 
+
+
 }
